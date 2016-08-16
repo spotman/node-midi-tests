@@ -3,7 +3,12 @@
 // require('nw.gui').Window.get().showDevTools();
 
 var five = require("johnny-five");
-var board = new five.Board();
+
+var board = new five.Board({
+  repl: false,
+  debug: true
+});
+
 var J5MIDI = require("./midi.js");
 
 // var five = require("johnny-five");
@@ -102,8 +107,8 @@ systemInput.on('message', function(deltaTime, message) {
   console.log('System MIDI round trip at', systemMidiEnd.getTime() - systemMidiStart.getTime(), 'ms');
 });
 
-var inputPortIndex = 4;
-var outputPortIndex = 4;
+var inputPortIndex = 1;
+var outputPortIndex = 1;
 
 if (inputPortIndex < inputPortsCount) {
 // Open the first available input port.
