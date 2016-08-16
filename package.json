@@ -1,0 +1,9 @@
+{
+  "name": "nwjs-johnny-five-demo",
+  "main": "index.html",
+  "devDependencies": {
+    "johnny-five": "^0.10.0",
+    "midi": "^0.9.5",
+    "nwjs-j5-fix": "^1.0.3"
+  }
+}
